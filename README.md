@@ -1,4 +1,4 @@
-# Sparkify ETL Pipeline on PostgreSQL
+# Project: Data Modeling with Postgres
 
 ## Backgroud:
 
