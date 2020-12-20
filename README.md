@@ -10,7 +10,7 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 Sample Song data in Dataframe:
 
-  (/images/song_data.png) 
+    ![song](/images/song_data.png) 
 
    ![Songdata](song_data.jpg) 
    ![Tux, the Linux mascot](/images/log_data.png)
