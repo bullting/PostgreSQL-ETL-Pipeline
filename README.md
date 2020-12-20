@@ -12,7 +12,7 @@ Sample Song data in Dataframe:
 
   ![Songdata](/song_data.png) 
 
-   ![Songdata](/song_data.png) 
+   ![Songdata](song_data.png) 
    
    ![Songdata](song data.png) 
 
