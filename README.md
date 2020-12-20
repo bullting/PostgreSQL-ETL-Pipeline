@@ -21,7 +21,7 @@ Sample Log data in Dataframe:
 ***
 ### Project Template and Step to Bulid:
 
-1. create_tables.py: 
+***1. create_tables.py:***
 First, create Sparkify database and establish connection. Then inilially drop all tables and ceate new tables.
 2. sql_queries.py: Second, build the following functions to execute when "create_table.py" call.
 
