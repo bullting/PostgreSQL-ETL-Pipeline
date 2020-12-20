@@ -6,7 +6,7 @@ Sparkify is using applcaition to stream the music. Sparkify wants to analyze the
 
 In this project, PostgreSQL was used to store data and using Python with psycopg2 to connect to database and create database schema then using Pandas Library to read JSON dataset and create Dataframe to ETL pipeline and store data to Fact and Dimension tables below for querying the results.
 
-### Dataset is available in JSON format, there are two dataset below: 
+## Dataset is available in JSON format, there are two dataset below: 
 
 To use pandas to read JSON and convert to Dataframe ***(pd.read_json(filepath, lines=True)***
 
@@ -18,10 +18,10 @@ Sample Log data in Dataframe:
 
 ![](/images/logdata.png)
 
-### DB Normalization to create Fact/Dimension table below:
+## DB Normalization to create Fact/Dimension table below:
 
 ***
-### Project Template and Step to Bulid:
+## Project Template and Step to Bulid:
 
 ***1. create_tables.py:***
 First, create Sparkify database and establish connection. Then inilially drop all tables and ceate new tables.
@@ -43,8 +43,7 @@ First, create Sparkify database and establish connection. Then inilially drop al
 ***5. elt.py:*** Use the code in etl.ipynb to create ETL pipeline to process all records in dataset and extract/load to all tables.
 
 ***
-
-### How to run the files:
+## How to run the files:
 
 1. Run "create_table.py" first to create Sparkify database and create fact table and dimesion tables. (All tables will be deleted everytime when running this file)
 
