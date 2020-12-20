@@ -10,8 +10,11 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 Sample Song data in Dataframe:
 
-  ![Song_data.](song data.png) 
+  ![Songdata](/song data.png) 
 
+   ![Songdata](/song data.png) 
+   
+   ![Songdata](song data.png) 
 
 ### DB Normalization to create Fact/Dimension table below:
 
