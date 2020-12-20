@@ -8,7 +8,7 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 ### Dataset is available in JSON format, there are two dataset below: 
 
-To use pandas to read JSON and convert to Dataframe (pd.read_json(filepath, lines=True)
+To use pandas to read JSON and convert to Dataframe ***(pd.read_json(filepath, lines=True)***
 
 Sample Song data in Dataframe:
 
