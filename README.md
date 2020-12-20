@@ -18,6 +18,7 @@ Sample Log data in Dataframe:
 
 ### DB Normalization to create Fact/Dimension table below:
 
+***
 ### Project Template and Step to Bulid:
 
 1. create_tables.py: 
