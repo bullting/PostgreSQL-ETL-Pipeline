@@ -17,13 +17,13 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 1. create_tables.py: First, create Sparkify database and establish connection. Then inilially drop all tables and ceate new tables.
 2. sql_queries.py: Second, build the following functions to execute when "create_table.py" call.
-2.1 Drop Table Function
-2.2 Create Table Function
-2.3 Insert Data to each table.
-2.4 Query Song that was select from function in etl.py
+- Drop Table Function
+- Create Table Function
+- Insert Data to each table.
+- Query Song that was select from function in etl.py
 3. etl.ipynb: Third, to create ETL process.(To read first row in dataset and extract/load to table to check that it works correctly.)
-3.1 Process the song data by read song files JSON files and create Dataframe then extrat and insert only value needed for songs_table and artists_table.
-3.2 Process the log data by read log files JSON files and create Dataframe then extrat and insert only value needed for users table and time table.
-3.3 Implement the query to select the same set of the title, artist_name and duration of song to find song_id and artist_id and extract data to insert into songplays_table.
+- Process the song data by read song files JSON files and create Dataframe then extrat and insert only value needed for songs_table and artists_table.
+- Process the log data by read log files JSON files and create Dataframe then extrat and insert only value needed for users table and time table.
+- Implement the query to select the same set of the title, artist_name and duration of song to find song_id and artist_id and extract data to insert into songplays_table.
 4. test.ipynb: This file was built to checj whether the record was loaded to the table correctly.
 5. elt.py: Use the code in etl.ipynb to create ETL pipeline to process all records in dataset and extract/load to all tables.
