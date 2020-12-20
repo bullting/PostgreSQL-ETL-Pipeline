@@ -8,7 +8,7 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 ### Dataset is available in JSON format, there are two dataset below: 
 
-![Song_data.](/song data.png) 
+  ![Song_data.](/song data.png) 
 ![Log_data.](/log data.jpg)
 
 ### DB Normalization to create Fact/Dimension table below:
@@ -17,8 +17,8 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 1. create_tables.py: First, create Sparkify database and establish connection. Then inilially drop all tables and ceate new tables.
 2. sql_queries.py: Second, build the following functions to execute when "create_table.py" call.
-  - Drop Table Function
-- Create Table Function
+   - Drop Table Function
+   - Create Table Function
 - Insert Data to each table.
 - Query Song that was select from function in etl.py
 3. etl.ipynb: Third, to create ETL process.(To read first row in dataset and extract/load to table to check that it works correctly.)
