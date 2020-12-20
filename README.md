@@ -8,8 +8,8 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 ### Dataset is available in JSON format, there are two dataset below: 
 
-![Song_data.](song data.png) 
-![Log_data.](log data.jpg)
+![Song_data.](/song data.png) 
+![Log_data.](/log data.jpg)
 
 ### DB Normalization to create Fact/Dimension table below:
 
