@@ -17,7 +17,7 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 1. create_tables.py: First, create Sparkify database and establish connection. Then inilially drop all tables and ceate new tables.
 2. sql_queries.py: Second, build the following functions to execute when "create_table.py" call.
-- Drop Table Function
+  - Drop Table Function
 - Create Table Function
 - Insert Data to each table.
 - Query Song that was select from function in etl.py
