@@ -41,3 +41,14 @@ First, create Sparkify database and establish connection. Then inilially drop al
 ***4. test.ipynb:*** This file was built to checj whether the record was loaded to the table correctly.
 
 ***5. elt.py:*** Use the code in etl.ipynb to create ETL pipeline to process all records in dataset and extract/load to all tables.
+
+***
+
+###How to run the files:
+
+1. Run "create_table.py" first to create Sparkify database and create fact table and dimesion tables. (All tables will be deleted everytime when running this file)
+
+2. Run etl.py to read song dataset and log data set and extract the only value for each table and load the data into all tables.
+
+
+
