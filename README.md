@@ -9,7 +9,12 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 ### Dataset is available in JSON format, there are two dataset below: 
 
 Sample Song data in Dataframe:
+
   ![](/images/songdata.png)
+  
+Sample Log data in Dataframe:
+
+![](/images/logdata.png)
 
 ### DB Normalization to create Fact/Dimension table below:
 
