@@ -20,6 +20,8 @@ Sample Log data in Dataframe:
 
 ## DB Normalization to create Fact/Dimension table below:
 
+![](/images/factdim.png)
+
 ***
 ## Project Template and Step to Bulid:
 
