@@ -22,7 +22,7 @@ Sample Log data in Dataframe:
 
 ![](/images/factdim.png)
 
-***
+
 ## Project Template and Step to Bulid:
 
 ***1. create_tables.py:***
@@ -44,7 +44,7 @@ First, create Sparkify database and establish connection. Then inilially drop al
 
 ***5. elt.py:*** Use the code in etl.ipynb to create ETL pipeline to process all records in dataset and extract/load to all tables.
 
-***
+
 ## How to run the files:
 
 1. Run "create_table.py" first to create Sparkify database and create fact table and dimesion tables. (All tables will be deleted everytime when running this file)
