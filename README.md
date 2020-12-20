@@ -10,9 +10,9 @@ In this project, PostgreSQL was used to store data and using Python with psycopg
 
 Sample Song data in Dataframe:
 
-  ![Su, Songdata](song_data.png) 
+  ![Su, Songdata](song_data.jpg) 
 
-   ![Songdata](song_data.png) 
+   ![Songdata](song_data.jpg) 
    
    ![Songdata](song data.png) 
 
