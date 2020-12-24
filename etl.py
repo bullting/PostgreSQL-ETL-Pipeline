@@ -6,6 +6,18 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
+    
+    """
+    Description: This function recieve two parameters from main function and do ETL process song dataset and artist dataset:
+    
+    Parameters:
+    cur: cursor object
+    filepath: location of dataset.
+    
+    1. Read JSON dataset and convert to Dataframe
+    2. Extract only values which is needed for each table and load it.
+    
+    """
     # open song file
     df = pd.read_json(filepath, lines=True)
 
@@ -14,11 +26,25 @@ def process_song_file(cur, filepath):
     cur.execute(song_table_insert, song_data)
     
     # insert artist record
-    artist_data = df[['artist_id', 'artist_name', 'artist_location', 'artist_latitude', 'artist_longitude']].values[0].tolist()
+    artist_data = df[['artist_id', 'artist_name', 'artist_location', 'artist_latitude','artist_longitude']].values[0].tolist()
     cur.execute(artist_table_insert, artist_data)
 
 
 def process_log_file(cur, filepath):
+    
+    """
+    Description: This function recieve two parameters from main function and do ETL process log data dataset:
+    
+    Parameters:
+    cur: cursor object
+    filepath: location of dataset.
+    
+    1. Read JSON dataset and convert to Dataframe
+    2. Extract only values which is needed for each table
+    3. Convert time format.
+    4. Load data to table.
+    
+    """
     # open log file
     df = pd.read_json(filepath, lines=True)
 
@@ -26,12 +52,19 @@ def process_log_file(cur, filepath):
     df = df.loc[df['page'] == 'NextSong']
 
     # convert timestamp column to datetime
-    t = pd.to_datetime(df['ts'], unit='ms')
+    t = pd.to_datetime(df.ts, unit='ms')
+    time_data = [t, \
+             t.dt.hour, \
+             t.dt.day, \
+             t.dt.week, \
+             t.dt.month, \
+             t.dt.year, \
+             t.dt.dayofweek]
+    column_labels = ['ts', 'hour', 'day', 'week', 'month', 'year', 'dayofweek']
+    time_df = pd.DataFrame(dict(zip(column_labels, time_data)))
     
     # insert time data records
-    time_data = (t.dt.time, t.dt.hour, t.dt.day, t.dt.weekofyear, t.dt.month, t.dt.year, t.dt.weekday)
-    column_labels = ('time', 'hour', 'day', 'weekofyear', 'month', 'year', 'weekday')
-    time_df = pd.DataFrame(dict(zip(column_labels, time_data)))
+    
 
     for i, row in time_df.iterrows():
         cur.execute(time_table_insert, list(row))
@@ -61,6 +94,18 @@ def process_log_file(cur, filepath):
 
 
 def process_data(cur, conn, filepath, func):
+    
+    """
+    Retrive parameter from 
+    main function and process_song_file function and process_log_file
+    
+    cur: cursor
+    conn: Postgre DB connection
+    filepath: the location of dataset
+    func: ETL process to process dataset
+    
+    """
+    
     # get all files matching extension from directory
     all_files = []
     for root, dirs, files in os.walk(filepath):
